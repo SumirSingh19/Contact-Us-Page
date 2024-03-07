@@ -3,6 +3,7 @@ import Contact from './components/Contact';
 import { Outlet, createBrowserRouter } from 'react-router-dom';
 import Error from './components/Error';
 import Submission from './components/Submission';
+import FirstPage from './components/FirstPage';
 
 const AppLayout = () => {
 
@@ -19,6 +20,10 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     children: [
+      {
+        path: "/",
+        element: <FirstPage />,
+      },
       {
       path: "/contact",
       element: <Contact />,
